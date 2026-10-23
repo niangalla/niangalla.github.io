@@ -265,6 +265,28 @@
         </article>
 
         <div class="projects-grid">
+          <article class="project-card pc-wide reveal" aria-labelledby="p-ragsn">
+            <div class="pc-wide-body">
+              <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.rag.kind">open source · RAG</span></span></div>
+              <h3 id="p-ragsn">Chatbot RAG e-Sénégal</h3>
+              <p class="pc-sub" data-i18n="projects.rag.sub">Citizen assistant for e‑senegal.sn administrative procedures</p>
+              <p data-i18n="projects.rag.desc">A RAG assistant that answers citizens' questions about administrative procedures on e‑senegal.sn, the Senegalese government's online one-stop portal, in French and strictly from its document base. A scraper pulls the official procedures catalogue from the portal's public GraphQL API; documents are chunked by section, embedded and indexed in ChromaDB. Retrieved chunks are re-ranked (title and keyword boosts, score threshold) before a local LLM generates the answer, streamed with its sources to a React chat interface.</p>
+              <p data-i18n="projects.rag.desc2">The system prompt enforces a fixed answer structure (documents to provide, cost, processing time) and an explicit "not enough information" reply instead of guessing.</p>
+              <ul class="tags"><li>RAG</li><li>Ollama</li><li>Llama 3.2</li><li>Sentence-Transformers</li><li>ChromaDB</li><li>FastAPI</li><li>React</li><li>Docker Compose</li></ul>
+              <div class="repo-links">
+                <a class="repo-link" href="https://github.com/niangalla/chatbot-rag-esenegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <span class="pc-note" data-i18n="projects.rag.note">Self-hosted with Docker Compose · no hosted demo</span>
+              </div>
+            </div>
+            <dl class="pc-stack">
+              <div><dt>LLM</dt><dd><span data-i18n="projects.rag.llm">Llama 3.2 3B via Ollama (local, CPU)</span></dd></div>
+              <div><dt>Embeddings</dt><dd>all-MiniLM-L6-v2</dd></div>
+              <div><dt data-i18n="projects.rag.vdb">Vector DB</dt><dd>ChromaDB</dd></div>
+              <div><dt>API</dt><dd><span data-i18n="projects.rag.api">FastAPI, streamed NDJSON</span></dd></div>
+              <div><dt data-i18n="projects.rag.ui">UI</dt><dd>React + Vite</dd></div>
+              <div><dt data-i18n="projects.rag.run">Run</dt><dd>Docker Compose, 4 services</dd></div>
+            </dl>
+          </article>
           <article class="project-card reveal">
             <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
             <h3>WattWatch Africa</h3>
