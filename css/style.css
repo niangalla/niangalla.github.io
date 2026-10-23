@@ -399,7 +399,7 @@ a.pc-media:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px;
 .group-sub { color: var(--muted); margin: 8px 0 0; font-size: .98rem; }
 
 /* Recommendations */
-.reco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.reco-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .reco-card {
   margin: 0; position: relative; display: flex; flex-direction: column; padding: 30px 26px 24px;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
