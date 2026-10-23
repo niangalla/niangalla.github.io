@@ -181,7 +181,7 @@
       "form.errShort": "Your message is a bit short. Please add a few more details (at least 10 characters).",
       "form.success": "<strong>Thanks, your message is on its way!</strong> I'll get back to you by email soon.",
       "form.fail": "<strong>Sorry, the message could not be sent.</strong> Please email me directly at <a href=\"mailto:niangalla98@gmail.com\">niangalla98@gmail.com</a>.",
-      "footer.made": "Designed & built in Dakar", "footer.top": "Back to top",
+      "footer.made": "Dakar, Senegal", "footer.top": "Back to top",
       "ui.toDark": "Switch to dark mode", "ui.toLight": "Switch to light mode",
       "ui.langSwitch": "Passer en français", "ui.menuOpen": "Open menu", "ui.menuClose": "Close menu"
     },
@@ -355,7 +355,7 @@
       "form.errShort": "Votre message est un peu court. Ajoutez quelques détails (10 caractères minimum).",
       "form.success": "<strong>Merci, votre message est bien parti !</strong> Je vous réponds par e-mail très vite.",
       "form.fail": "<strong>Désolé, le message n'a pas pu être envoyé.</strong> Écrivez-moi directement à <a href=\"mailto:niangalla98@gmail.com\">niangalla98@gmail.com</a>.",
-      "footer.made": "Conçu & développé à Dakar", "footer.top": "Haut de page",
+      "footer.made": "Dakar, Sénégal", "footer.top": "Haut de page",
       "ui.toDark": "Passer en mode sombre", "ui.toLight": "Passer en mode clair",
       "ui.langSwitch": "Switch to English", "ui.menuOpen": "Ouvrir le menu", "ui.menuClose": "Fermer le menu"
     }
