@@ -407,7 +407,7 @@ a.pc-media:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px;
 .group-sub { color: var(--muted); margin: 8px 0 0; font-size: .98rem; }
 
 /* Recommendations */
-.reco-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.reco-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .reco-card {
   margin: 0; position: relative; display: flex; flex-direction: column; padding: 30px 26px 24px;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
@@ -420,6 +420,7 @@ html[lang="fr"] .reco-tr { display: none; }
 .reco-card figcaption { margin-top: auto; padding-top: 18px; display: grid; gap: 3px; border-top: 1px solid var(--line); }
 .reco-name { font: 600 1rem var(--f-head); color: var(--text); }
 .reco-head { font-size: .86rem; color: var(--text-2); }
+@media (min-width: 961px) { .reco-head { line-height: 1.5; min-height: 3em; } }
 .reco-rel { font-size: .74rem; color: var(--muted); }
 .reco-link { margin-top: 8px; display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: .88rem; width: fit-content; }
 .pc-note { color: var(--muted); font-size: .84rem; }
