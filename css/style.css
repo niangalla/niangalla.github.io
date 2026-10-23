@@ -186,6 +186,10 @@ html[lang="en"] .lang-btn [data-lang-opt="en"], html[lang="fr"] .lang-btn [data-
 .badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; font: 600 .74rem var(--f-mono); }
 .badge-prod { background: var(--gold); color: #1d1500; }
 .badge-soft { background: var(--primary-soft); color: var(--primary); }
+.badge-dev { background: rgba(242, 183, 5, .12); color: var(--gold-deep); box-shadow: inset 0 0 0 1.5px var(--gold); }
+[data-theme="dark"] .badge-dev { background: rgba(242, 183, 5, .1); color: var(--gold); }
+.dev-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; border: 2px solid var(--gold); background: linear-gradient(90deg, var(--gold) 50%, transparent 50%); }
+.pc-top-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 10px; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; display: inline-block; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
