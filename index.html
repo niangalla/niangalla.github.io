@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alla Niang · Data &amp; AI Engineer · Dakar, Senegal</title>
+  <meta name="description" content="Alla NIANG, Data & AI Engineer based in Dakar, Senegal. ELT pipelines with Airflow, dbt and SQL, cloud data warehouses, and production AI assistants (RAG, tool calling, guardrails). Open to remote opportunities.">
+  <meta name="author" content="Alla NIANG">
+  <meta name="keywords" content="Alla Niang, Alla NIANG, Data Engineer, AI Engineer, Dakar, Senegal, Airflow, dbt, Snowflake, RAG, LLM, remote">
+  <meta name="theme-color" content="#1a5fd6">
+  <link rel="canonical" href="https://niangalla.github.io/">
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alla Niang">
+  <meta property="og:title" content="Alla Niang · Data & AI Engineer">
+  <meta property="og:description" content="Reliable data pipelines and production AI assistants, built from Dakar, Senegal. Open to remote opportunities.">
+  <meta property="og:url" content="https://niangalla.github.io/">
+  <meta property="og:image" content="https://niangalla.github.io/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AllaNiang7">
+  <meta name="twitter:title" content="Alla Niang · Data & AI Engineer">
+  <meta name="twitter:description" content="Reliable data pipelines and production AI assistants, built from Dakar, Senegal.">
+  <meta name="twitter:image" content="https://niangalla.github.io/assets/og-image.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Alla Niang","jobTitle":"Data & AI Engineer","email":"mailto:niangalla98@gmail.com","telephone":"+221775030991","address":{"@type":"PostalAddress","addressLocality":"Dakar","addressCountry":"SN"},"url":"https://niangalla.github.io/","image":"https://niangalla.github.io/assets/alla-niang.jpg","sameAs":["https://www.linkedin.com/in/alla-niang-212644137","https://github.com/niangalla","https://x.com/AllaNiang7"]}
+  </script>
+  <!-- Apply saved theme early to avoid a flash -->
+  <script>try{var t=localStorage.getItem('an-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.8 6.8l1.4-2.2 4.3 1.7V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.04 21.5h-.01a9.45 9.45 0 0 1-4.81-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.46 9.47-9.46 2.53 0 4.9.99 6.69 2.78a9.4 9.4 0 0 1 2.77 6.69c0 5.22-4.25 9.46-9.46 9.46Zm8.05-17.51A11.3 11.3 0 0 0 12.04.66C5.76.66.65 5.77.65 12.05c0 2.01.52 3.97 1.52 5.69L.55 23.66l6.05-1.59a11.36 11.36 0 0 0 5.43 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.34-8.06Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10.5 13.5M21 3l-6.5 18-4-7.5L3 9.5 21 3Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Alla Niang, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M9 30 L20 10 L31 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 22 H26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="9" cy="30" r="3.4" class="bm-node"/>
+          <circle cx="31" cy="30" r="3.4" class="bm-node"/>
+          <circle cx="20" cy="10" r="3.6" class="bm-gold"/>
+        </svg>
+        <span class="brand-name">Alla Niang</span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#certifications" data-i18n="nav.certs">Certifications</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <button class="tool-btn lang-btn" id="lang-toggle" type="button" aria-label="Passer en français">
+          <span data-lang-opt="en">EN</span><span class="sep" aria-hidden="true">/</span><span data-lang-opt="fr">FR</span>
+        </button>
+        <button class="tool-btn icon-only" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="tool-btn icon-only menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </header>
+
+  <!-- Pipeline rail: the page reads like a DAG -->
+  <aside class="pipeline-rail" aria-hidden="true">
+    <div class="rail-track"><div class="rail-fill" id="rail-fill"></div></div>
+    <ol class="rail-stages">
+      <li data-target="hero"><span class="node"></span><span class="rail-label" data-i18n="stage.source">source</span></li>
+      <li data-target="about"><span class="node"></span><span class="rail-label" data-i18n="stage.ingest">ingest</span></li>
+      <li data-target="skills"><span class="node"></span><span class="rail-label" data-i18n="stage.transform">transform</span></li>
+      <li data-target="projects"><span class="node"></span><span class="rail-label" data-i18n="stage.model">model</span></li>
+      <li data-target="experience"><span class="node"></span><span class="rail-label" data-i18n="stage.serve">serve</span></li>
+      <li data-target="certifications"><span class="node"></span><span class="rail-label" data-i18n="stage.validate">validate</span></li>
+      <li data-target="contact"><span class="node"></span><span class="rail-label" data-i18n="stage.deploy">deploy</span></li>
+    </ol>
+  </aside>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="availability"><span class="avail-dot" aria-hidden="true"></span><span data-i18n="hero.badge">Open to remote opportunities</span></p>
+          <h1 id="hero-title" class="hero-name">Alla Niang</h1>
+          <p class="hero-role"><span data-i18n="hero.role">Data &amp; AI Engineer</span></p>
+          <p class="hero-pitch" data-i18n="hero.pitch">I build reliable data pipelines and production AI assistants that turn raw, messy data into tested tables, clear dashboards and useful answers.</p>
+          <p class="hero-loc"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="hero.loc">Dakar, Senegal</span> <span class="flag" role="img" aria-label="Senegal">🇸🇳</span><span class="hero-remote" data-i18n="hero.remote">Remote worldwide, freelance &amp; collaborations</span></p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="assets/Alla_Niang_CV.pdf" download="Alla_Niang_CV.pdf">
+              <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg><span data-i18n="hero.cv">Download CV</span>
+            </a>
+            <a class="btn btn-ghost" href="#contact"><span data-i18n="hero.contact">Contact me</span></a>
+          </div>
+          <ul class="socials" aria-label="Social links">
+            <li><a href="https://github.com/niangalla" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/alla-niang-212644137" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="https://x.com/AllaNiang7" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+            <li><a href="mailto:niangalla98@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            <li><a href="https://wa.me/221775030991" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <svg class="dag-ornament" viewBox="0 0 420 480" aria-hidden="true">
+            <g class="dag-edges">
+              <path d="M40 70 C 110 70, 120 140, 190 150"/>
+              <path d="M30 250 C 100 250, 110 170, 190 150"/>
+              <path d="M190 150 C 260 160, 300 60, 380 60"/>
+              <path d="M30 250 C 90 330, 140 420, 230 440"/>
+              <path d="M230 440 C 300 450, 340 380, 395 360"/>
+            </g>
+            <g class="dag-flow">
+              <path d="M40 70 C 110 70, 120 140, 190 150"/>
+              <path d="M190 150 C 260 160, 300 60, 380 60"/>
+              <path d="M230 440 C 300 450, 340 380, 395 360"/>
+            </g>
+            <circle class="dag-node" cx="40" cy="70" r="7"/>
+            <circle class="dag-node" cx="30" cy="250" r="6"/>
+            <circle class="dag-node" cx="190" cy="150" r="5"/>
+            <circle class="dag-node" cx="230" cy="440" r="6"/>
+            <circle class="dag-node gold" cx="380" cy="60" r="9"/>
+            <circle class="dag-node" cx="395" cy="360" r="7"/>
+          </svg>
+          <div class="photo-frame">
+            <picture>
+              <source srcset="assets/alla-niang.webp" type="image/webp">
+              <img src="assets/alla-niang.jpg" width="800" height="1000" alt="Portrait of Alla Niang, smiling with arms crossed" data-i18n-alt="hero.photoAlt" fetchpriority="high">
+            </picture>
+          </div>
+          <div class="float-chip chip-a"><span class="mono">Airflow → dbt → marts</span></div>
+          <div class="float-chip chip-b"><span class="live-dot" aria-hidden="true"></span><span class="mono" data-i18n="hero.chipProd">CuberOne · in production</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / INGEST -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">01</span><span data-i18n="stage.ingest">ingest</span></p>
+          <h2 id="about-title" data-i18n="about.title">About me</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p data-i18n-html="about.p1">I'm <strong>Alla NIANG</strong>, a Data &amp; AI Engineer at <strong>Cuberfit</strong> in Dakar. I design and run ELT pipelines (Airflow, SQL, dbt) that turn raw source data into tested, trustworthy tables for analytics and decision-making.</p>
+            <p data-i18n-html="about.p2">I also build <strong>CuberOne</strong>, Cuberfit's production voice AI assistant: retrieval-augmented generation over a knowledge base, tool calling into the CRM and customer support, guardrails against hallucinations and a non-regression test suite.</p>
+            <p data-i18n-html="about.p3">My background is full-stack web development (a remote team in Dubai, university platforms used by 5,000+ users), which keeps me close to product needs. Known for rigorous, well-documented work and clear technical explanations, I'm comfortable in fully remote, English-speaking teams.</p>
+          </div>
+          <dl class="facts reveal">
+            <div class="fact"><dt data-i18n="about.f.based">Based in</dt><dd data-i18n="about.f.basedV">Dakar, Senegal (UTC+0)</dd></div>
+            <div class="fact"><dt data-i18n="about.f.focus">Focus</dt><dd data-i18n="about.f.focusV">Data engineering · LLM / RAG systems · Analytics</dd></div>
+            <div class="fact"><dt data-i18n="about.f.lang">Languages</dt><dd data-i18n="about.f.langV">French (native) · English (professional, EF SET C2)</dd></div>
+            <div class="fact"><dt data-i18n="about.f.edu">Education</dt><dd data-i18n="about.f.eduV">Sonatel Academy – Orange Digital Center (2025) · Master's in Software Engineering, in progress</dd></div>
+            <div class="fact"><dt data-i18n="about.f.off">Off the clock</dt><dd data-i18n="about.f.offV">Football, and a loyal Real Madrid supporter ⚽</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS / TRANSFORM -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">02</span><span data-i18n="stage.transform">transform</span></p>
+          <h2 id="skills-title" data-i18n="skills.title">Skills &amp; toolbox</h2>
+          <p class="section-sub" data-i18n="skills.sub">The tools I use to move data from source to decision, and to put AI into production.</p>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h13m0 0-3.5-3.5M17 7l-3.5 3.5M20 17H7m0 0 3.5-3.5M7 17l3.5 3.5"/></svg></span><span data-i18n="skills.de">Data engineering</span></h3>
+            <ul class="chips"><li>Apache Airflow</li><li>dbt</li><li>ELT / ETL</li><li>Airbyte</li><li>Apache Spark</li><li>Apache Kafka</li><li data-i18n="skills.c.batch">Batch &amp; streaming</li><li data-i18n="skills.c.quality">Data quality tests</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-13M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></span><span data-i18n="skills.wh">Warehouses &amp; modeling</span></h3>
+            <ul class="chips"><li>Snowflake</li><li>DuckDB</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>HDFS</li><li data-i18n="skills.c.star">Star schema</li><li>Bronze / Silver / Gold</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 13.9 10l6.6 2-6.6 2L12 20.5 10.1 14l-6.6-2 6.6-2L12 3.5Z"/></svg></span><span data-i18n="skills.ai">AI / ML systems</span></h3>
+            <ul class="chips"><li>LLMs</li><li>RAG</li><li data-i18n="skills.c.tools">Tool calling</li><li>Guardrails</li><li data-i18n="skills.c.regr">Non-regression testing</li><li data-i18n="skills.c.voice">Voice AI (ElevenLabs)</li><li>PyTorch</li><li>OpenCV</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18.5h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.1 4.7 4.7 0 0 0 7 18.5Z"/></svg></span><span data-i18n="skills.cloud">Cloud &amp; DevOps</span></h3>
+            <ul class="chips"><li>AWS (S3, IAM)</li><li>Google Cloud</li><li>Docker / Compose</li><li>Terraform</li><li>Linux</li><li>MinIO</li><li>Git</li><li>GitHub Actions CI/CD</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8.5 7-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></svg></span><span data-i18n="skills.prog">Programming &amp; ingestion</span></h3>
+            <ul class="chips"><li>Python</li><li data-i18n="skills.c.sql">SQL (advanced)</li><li data-i18n="skills.c.api">API integration</li><li>Scrapy</li><li>Playwright</li><li>pdfplumber</li><li>React</li><li>Next.js</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg></span><span data-i18n="skills.bi">Analytics &amp; BI</span></h3>
+            <ul class="chips"><li>Power BI (DAX, Power Query)</li><li>Streamlit</li><li>Amplitude</li><li>Grafana</li><li>ELK</li><li data-i18n="skills.c.eda">Exploratory data analysis</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / MODEL -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">03</span><span data-i18n="stage.model">model</span></p>
+          <h2 id="projects-title" data-i18n="projects.title">Selected projects</h2>
+          <p class="section-sub" data-i18n="projects.sub">From a production AI assistant to end-to-end pipelines on Senegalese data.</p>
+        </header>
+
+        <article class="flagship reveal" aria-labelledby="p-cuberone">
+          <div class="flagship-body">
+            <div class="flagship-meta">
+              <span class="badge badge-prod"><span class="live-dot" aria-hidden="true"></span><span data-i18n="projects.inprod">In production</span></span>
+              <span class="badge badge-soft" data-i18n="projects.flagship">Flagship · Cuberfit</span>
+            </div>
+            <h3 id="p-cuberone">CuberOne</h3>
+            <p class="flagship-lead" data-i18n="projects.cuber.lead">Cuberfit's production voice AI assistant.</p>
+            <ul class="flagship-points">
+              <li data-i18n="projects.cuber.b1">Retrieval-augmented generation (RAG) over the company knowledge base.</li>
+              <li data-i18n="projects.cuber.b2">LLM tool calling into the CRM and customer support: customer data lookups and support ticket creation from the conversation.</li>
+              <li data-i18n="projects.cuber.b3">Guardrails against hallucinated answers and a non-regression test suite to keep behaviour stable across changes.</li>
+              <li data-i18n="projects.cuber.b4">Architecture documented at each step.</li>
+            </ul>
+            <ul class="tags"><li>LLM</li><li>RAG</li><li>Tool calling</li><li>Guardrails</li><li>ElevenLabs</li><li data-i18n="projects.tag.regr">Regression tests</li></ul>
+            <p class="private-note"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="projects.private">Proprietary system, no public repository.</span></p>
+          </div>
+          <div class="flagship-flow" aria-hidden="true">
+            <div class="flow-step"><span class="mono">voice</span></div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step"><span class="mono">RAG · knowledge base</span></div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step"><span class="mono">tools · CRM / support</span></div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step gold"><span class="mono">guardrails + tests</span></div>
+          </div>
+        </article>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
+            <h3>WattWatch Africa</h3>
+            <p class="pc-sub" data-i18n="projects.ww.sub">Energy affordability ELT pipeline</p>
+            <p data-i18n="projects.ww.desc">Bronze/Silver/Gold ELT on regulator (CRSE) tariff PDFs for 5 Senegalese electricity operators: Scrapy + pdfplumber ingestion, versioned landing in AWS S3, Airflow COPY INTO Snowflake, dbt models tested on every run, Power BI serving. Infrastructure declared in Terraform, GitHub Actions CI.</p>
+            <ul class="tags"><li>AWS S3</li><li>Snowflake</li><li>Airflow</li><li>dbt</li><li>Terraform</li><li>Docker / MinIO</li><li>GitHub Actions</li><li>Power BI</li></ul>
+            <a class="repo-link" href="https://github.com/niangalla/WattWatch_Africa" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
+            <h3>Observatoire Internet</h3>
+            <p class="pc-sub" data-i18n="projects.obs.sub">Internet price comparison · dbt + DuckDB star schema</p>
+            <p data-i18n="projects.obs.desc">Playwright scrapers archive dated, immutable HTML/JSON snapshots; dbt on DuckDB models them into a star schema (dimensions + fact_tarif) where prices live as dated facts. Offers are normalised into unit prices (per Mb/s) across operators and countries, reported in Power BI and Streamlit.</p>
+            <ul class="tags"><li>Playwright</li><li>dbt</li><li>DuckDB</li><li data-i18n="skills.c.star">Star schema</li><li>Power BI</li><li>Streamlit</li></ul>
+            <a class="repo-link" href="https://github.com/niangalla/observatoire-internet" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">2025 · Sonatel Academy</span></div>
+            <h3>DataFlowEngineering360</h3>
+            <p class="pc-sub" data-i18n="projects.dfe.sub">Maritime big data pipeline</p>
+            <p data-i18n="projects.dfe.desc">Distributed pipeline on Port Autonome de Dakar data: ingestion with Apache Kafka, processing with Apache Spark, storage on HDFS, Airflow-orchestrated ETL into a PostgreSQL data warehouse, Docker Compose deployment and ELK monitoring.</p>
+            <ul class="tags"><li>Kafka</li><li>Spark</li><li>HDFS</li><li>Airflow</li><li>PostgreSQL</li><li>Docker Compose</li><li>ELK</li></ul>
+            <a class="repo-link" href="https://github.com/niangalla/DataFlowEngineering360_BigData_Maritime_Pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">2025</span></div>
+            <h3>DataFlow360 MeteoStream</h3>
+            <p class="pc-sub" data-i18n="projects.met.sub">Real-time &amp; batch weather data pipeline</p>
+            <p data-i18n="projects.met.desc">Combines streaming and batch processing of weather data, with ELK monitoring and DevOps practices.</p>
+            <ul class="tags"><li>Streaming</li><li>Batch</li><li>ELK</li><li>DevOps</li></ul>
+            <a class="repo-link" href="https://github.com/niangalla/dataflow360_meteo_stream_pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">AI · Computer vision</span></div>
+            <h3>Realtime Face Recognition</h3>
+            <p class="pc-sub" data-i18n="projects.face.sub">Real-time biometric identification of learners</p>
+            <p data-i18n="projects.face.desc">A real-time face recognition system built with FaceNet embeddings and an SVM classifier.</p>
+            <ul class="tags"><li>Python</li><li>PyTorch</li><li>FaceNet</li><li>SVM</li><li>OpenCV</li></ul>
+            <a class="repo-link" href="https://github.com/niangalla/Realtime_Face_Recognition" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-top"><span class="pc-year mono">2026 · Power BI</span></div>
+            <h3 data-i18n="projects.pbi.title">KPI dashboards, Senegal</h3>
+            <p class="pc-sub" data-i18n="projects.pbi.sub">Resilient agriculture &amp; community health programs</p>
+            <p data-i18n="projects.pbi.desc">Target vs actual tracking (completion rate, gap to target, territorial prioritization) with relational models and DAX measures across 8 regions and 8 health districts.</p>
+            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li data-i18n="projects.tag.kpi">KPI design</li></ul>
+            <div class="repo-links">
+              <a class="repo-link" href="https://github.com/niangalla/dashboard-agriculture-resiliente-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.agri">Agriculture</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="repo-link" href="https://github.com/niangalla/dashboard-sante-communautaire-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.health">Health</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+        <p class="more-link reveal"><a href="https://github.com/niangalla" target="_blank" rel="noopener"><span data-i18n="projects.more">More on GitHub</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / SERVE -->
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">04</span><span data-i18n="stage.serve">serve</span></p>
+          <h2 id="exp-title" data-i18n="exp.title">Experience</h2>
+        </header>
+        <div class="exp-layout">
+          <ol class="timeline">
+            <li class="tl-item current reveal">
+              <span class="tl-node" aria-hidden="true"></span>
+              <div class="tl-card">
+                <p class="tl-date mono" data-i18n="exp.cuber.date">Mar 2026 – Present</p>
+                <h3 data-i18n="exp.cuber.role">Data &amp; AI Engineer</h3>
+                <p class="tl-org">Cuberfit · Dakar</p>
+                <ul>
+                  <li data-i18n="exp.cuber.b1">Design and build automated ELT pipelines orchestrated with Apache Airflow; model and transform data with SQL and dbt; containerized workloads with Docker.</li>
+                  <li data-i18n="exp.cuber.b2">Designed the target ingestion architecture (Airbyte → warehouse → dbt → marts).</li>
+                  <li data-i18n="exp.cuber.b3">Build and operate CuberOne, the production voice AI assistant (RAG, tool calling into CRM/support, guardrails, non-regression tests).</li>
+                  <li data-i18n="exp.cuber.b4">Product analytics with Amplitude: user event tracking and key product metrics, with Product and Engineering teams.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-node" aria-hidden="true"></span>
+              <div class="tl-card">
+                <p class="tl-date mono" data-i18n="exp.dscale.date">Jun 2024 – Nov 2024</p>
+                <h3 data-i18n="exp.dscale.role">Full-Stack Web Developer (Remote)</h3>
+                <p class="tl-org">DSCALE.io, Medad Holding · <span data-i18n="exp.dubai">Dubai</span></p>
+                <ul>
+                  <li data-i18n="exp.dscale.b1">Contributed to a blockchain-based (ICP) crowdfunding platform with React and Next.js; integrated data via APIs and built views to track KPIs defined with the team.</li>
+                  <li data-i18n="exp.dscale.b2">International remote team, all collaboration and deliverables in English.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-node" aria-hidden="true"></span>
+              <div class="tl-card">
+                <p class="tl-date mono" data-i18n="exp.appen.date">Oct 2023 – Oct 2024</p>
+                <h3 data-i18n="exp.appen.role">AI Training Data Contributor (Freelance, Remote)</h3>
+                <p class="tl-org">Appen</p>
+                <ul>
+                  <li data-i18n="exp.appen.b1">Produced AI training data (transcription) and performed product testing for remote clients.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="tl-item reveal">
+              <span class="tl-node" aria-hidden="true"></span>
+              <div class="tl-card">
+                <p class="tl-date mono" data-i18n="exp.uidt.date">Mar 2022 – Oct 2022</p>
+                <h3 data-i18n="exp.uidt.role">Full-Stack Web Developer</h3>
+                <p class="tl-org" data-i18n="exp.uidt.org">IT Department (DSI), Université Iba Der Thiam · Thiès</p>
+                <ul>
+                  <li data-i18n="exp.uidt.b1">Built two platforms (claims management, student journey tracking) used by 5,000+ users, cutting processing time by 50% and simplifying reporting for 2,000+ students per semester.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="edu reveal" aria-labelledby="edu-title">
+            <h3 id="edu-title" data-i18n="edu.title">Education</h3>
+            <ul class="edu-list">
+              <li>
+                <p class="tl-date mono" data-i18n="edu.sa.date">Feb 2025 – Dec 2025 · Graduated</p>
+                <p class="edu-name" data-i18n="edu.sa.name">Data Development Program</p>
+                <p class="edu-org">Sonatel Academy – Orange Digital Center, Dakar</p>
+              </li>
+              <li>
+                <p class="tl-date mono" data-i18n="edu.ma.date">2023 – Present</p>
+                <p class="edu-name" data-i18n="edu.ma.name">Master's in Computer Science, Software Engineering</p>
+                <p class="edu-org">Université Iba Der Thiam, Thiès</p>
+              </li>
+              <li>
+                <p class="tl-date mono">2018 – 2021</p>
+                <p class="edu-name" data-i18n="edu.ba.name">Bachelor's in Computer Science, Software Engineering</p>
+                <p class="edu-org"><span>Université Iba Der Thiam, Thiès</span> · <span data-i18n="edu.ba.note">ranked 2nd in class, honors</span></p>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS / VALIDATE -->
+    <section class="section" id="certifications" aria-labelledby="certs-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">05</span><span data-i18n="stage.validate">validate</span></p>
+          <h2 id="certs-title" data-i18n="certs.title">Certifications</h2>
+          <p class="section-sub" data-i18n="certs.sub">Every credential links to its public verification page.</p>
+        </header>
+        <ul class="certs-grid">
+          <li class="cert reveal">
+            <span class="cert-issuer mono">IBM · Credly</span>
+            <h3>Data Engineering Essentials</h3>
+            <a class="verify" href="https://www.credly.com/badges/8295e5f0-015e-4f2d-96c8-291906f15fc4/linked_in_profile" target="_blank" rel="noopener" aria-label="Verify IBM Data Engineering Essentials on Credly"><span data-i18n="certs.verify">Verify</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="cert reveal">
+            <span class="cert-issuer mono">IBM · Credly</span>
+            <h3>NoSQL Databases Essentials</h3>
+            <a class="verify" href="https://www.credly.com/badges/f1ab1ac6-7a16-4154-9c11-87acdf59f6cd/linked_in_profile" target="_blank" rel="noopener" aria-label="Verify IBM NoSQL Databases Essentials on Credly"><span data-i18n="certs.verify">Verify</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="cert reveal">
+            <span class="cert-issuer mono">Coursera</span>
+            <h3>Retrieve Data with Multiple-Table SQL Queries</h3>
+            <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/2ECGFZ7KQ3XY" target="_blank" rel="noopener" aria-label="Verify Coursera certificate"><span data-i18n="certs.verify">Verify</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="cert reveal">
+            <span class="cert-issuer mono">EF SET</span>
+            <h3 data-i18n="certs.efset">EF SET English Certificate · C2 Proficient</h3>
+            <a class="verify" href="https://cert.efset.org/NdazXu" target="_blank" rel="noopener" aria-label="Verify EF SET English certificate"><span data-i18n="certs.verify">Verify</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="cert reveal">
+            <span class="cert-issuer mono">Global Mentorship Initiative</span>
+            <h3 data-i18n="certs.gmi">Professional Mentorship Program Certificate</h3>
+            <a class="verify" href="https://credentials.globalmentorship.org/credentials/a45a03be-feae-45f5-a2ea-e3332b1e0f75?preview=1" target="_blank" rel="noopener" aria-label="Verify Global Mentorship Initiative certificate"><span data-i18n="certs.verify">Verify</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT / DEPLOY -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num">06</span><span data-i18n="stage.deploy">deploy</span></p>
+          <h2 id="contact-title" data-i18n="contact.title">Let's build something together</h2>
+          <p class="section-sub" data-i18n="contact.sub">Open to remote roles worldwide, freelance missions and collaborations. The fastest way to reach me is email or WhatsApp.</p>
+        </header>
+        <div class="contact-grid">
+          <ul class="contact-cards">
+            <li class="reveal"><a class="c-card" href="mailto:niangalla98@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span><span class="c-label" data-i18n="contact.email">Email</span><span class="c-value">niangalla98@gmail.com</span></span></a></li>
+            <li class="reveal"><a class="c-card" href="tel:+221775030991"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><span class="c-label" data-i18n="contact.phone">Phone</span><span class="c-value">+221 77 503 09 91</span></span></a></li>
+            <li class="reveal"><a class="c-card" href="https://wa.me/221775030991" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg><span><span class="c-label">WhatsApp</span><span class="c-value" data-i18n="contact.wa">Chat on WhatsApp</span></span></a></li>
+            <li class="reveal"><a class="c-card" href="https://www.linkedin.com/in/alla-niang-212644137" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><span><span class="c-label">LinkedIn</span><span class="c-value">in/alla-niang-212644137</span></span></a></li>
+            <li class="reveal"><a class="c-card" href="https://github.com/niangalla" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span><span class="c-label">GitHub</span><span class="c-value">github.com/niangalla</span></span></a></li>
+            <li class="reveal"><a class="c-card" href="https://x.com/AllaNiang7" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg><span><span class="c-label">X</span><span class="c-value">@AllaNiang7</span></span></a></li>
+          </ul>
+
+          <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/ajax/niangalla98@gmail.com" method="post" novalidate>
+            <h3 data-i18n="form.title">Send a quick message</h3>
+            <p class="form-note" data-i18n="form.note">Your message is sent straight to my inbox. I usually reply within a few days.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name" data-i18n="form.name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="field">
+                <label for="f-email" data-i18n="form.email">Your email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required data-i18n-ph="form.emailPh" placeholder="you@company.com">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-subject" data-i18n="form.subject">Subject</label>
+              <input id="f-subject" name="subject" type="text" maxlength="150" required data-i18n-ph="form.subjectPh" placeholder="Remote data engineering role">
+            </div>
+            <div class="field">
+              <label for="f-msg" data-i18n="form.message">Message</label>
+              <textarea id="f-msg" name="message" rows="5" maxlength="5000" required></textarea>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-honey">Leave this field empty</label>
+              <input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button class="btn btn-primary form-submit" type="submit"><span class="spinner" aria-hidden="true"></span><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg><span class="btn-label" data-i18n="form.send">Send message</span></button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Alla NIANG · <span data-i18n="footer.made">Designed &amp; built in Dakar</span> 🇸🇳</p>
+      <a href="#hero" class="back-top"><span data-i18n="footer.top">Back to top</span> ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
