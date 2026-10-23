@@ -6,12 +6,19 @@ The contact form posts to [FormSubmit](https://formsubmit.co) (free, no account)
 
 ```
 index.html          single page (EN by default, FR/EN toggle, light/dark toggle)
-css/style.css       all styles ("data pipeline" theme)
+css/style.css       all styles ("data pipeline" theme + v2 redesign overrides at the end: oversized hero, numbered works, handwritten notes)
 js/main.js          translations (EN/FR object), theme, pipeline rail, contact form (FormSubmit)
 assets/             photo (webp + jpg), CV PDF, favicon, Open Graph image
 assets/projects/    project card visuals (webp): repo diagrams/screenshots (*-card, *-full) and drawn diagrams (*-diagram)
 .nojekyll           tells GitHub Pages to serve files as-is
 ```
+
+## Versions
+
+- **v2 (current, since 2026-10-23):** redesign first built as a draft under `/draft/`, then promoted to the root. Big "DATA & AI ENGINEER" hero, "Open to work" pill, numbered flagship projects (01 CuberOne, 02 Chatbot RAG e-Sénégal, 03 WattWatch Africa), "More projects" grid, two handwritten notes (Caveat font).
+- **v1 (previous design):** git tag `v1-original` in the `niangalla.github.io` repo. To roll back: `git checkout v1-original -- index.html css js assets && git commit -m "Roll back to v1" && git push`.
+- `/draft/` now only holds a redirect to `/` so old draft links keep working.
+- This folder is the **single source of truth**: edit `index.html`, `css/style.css` and `js/main.js` here directly. The old `build_draft.py` generator was retired (renamed `build_draft.retired.py`, it exits immediately) because re-running it would regenerate the page from v1 and overwrite edits.
 
 ## Preview locally
 
