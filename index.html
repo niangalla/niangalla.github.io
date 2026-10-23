@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202610231639">
+  <link rel="stylesheet" href="css/style.css?v=202610231745">
 </head>
 <body>
   <!-- SVG icon sprite -->
@@ -175,9 +175,8 @@
         </header>
         <div class="about-grid">
           <div class="about-text reveal">
-            <p data-i18n-html="about.p1">I'm <strong>Alla NIANG</strong>, a Data &amp; AI Engineer at <strong>Cuberfit</strong> in Dakar. I design and run ELT pipelines (Airflow, SQL, dbt) that turn raw source data into tested, trustworthy tables for analytics and decision-making.</p>
-            <p data-i18n-html="about.p2">I also build <strong>CuberOne</strong>, Cuberfit's production voice AI assistant: retrieval-augmented generation over a knowledge base, tool calling into the CRM and customer support, guardrails against hallucinations and a non-regression test suite.</p>
-            <p data-i18n-html="about.p3">My background is full-stack web development (a remote team in Dubai, university platforms used by 5,000+ users), which keeps me close to product needs. Known for rigorous, well-documented work and clear technical explanations, I'm comfortable in fully remote, English-speaking teams.</p>
+            <p data-i18n-html="about.p1">I'm <strong>Alla NIANG</strong>, a Data &amp; AI Engineer at <strong>Cuberfit</strong> in Dakar. I build ELT pipelines (Airflow, SQL, dbt) and <strong>CuberOne</strong>, Cuberfit's production voice AI assistant.</p>
+            <p data-i18n-html="about.p2">A full-stack web background keeps me close to product needs, and I work comfortably in remote, English-speaking teams.</p>
           </div>
           <dl class="facts reveal">
             <div class="fact"><dt data-i18n="about.f.based">Based in</dt><dd data-i18n="about.f.basedV">Dakar, Senegal (UTC+0)</dd></div>
@@ -244,103 +243,158 @@
             </div>
             <h3 id="p-cuberone">CuberOne</h3>
             <p class="flagship-lead" data-i18n="projects.cuber.lead">Cuberfit's production voice AI assistant.</p>
-            <ul class="flagship-points">
-              <li data-i18n="projects.cuber.b1">Retrieval-augmented generation (RAG) over the company knowledge base.</li>
-              <li data-i18n="projects.cuber.b2">LLM tool calling into the CRM and customer support: customer data lookups and support ticket creation from the conversation.</li>
-              <li data-i18n="projects.cuber.b3">Guardrails against hallucinated answers and a non-regression test suite to keep behaviour stable across changes.</li>
-              <li data-i18n="projects.cuber.b4">Architecture documented at each step.</li>
-            </ul>
+            <p class="pc-desc" data-i18n="projects.cuber.short">It answers from the company knowledge base (RAG) and acts on the CRM and customer support through LLM tool calling, behind guardrails and a non-regression test suite.</p>
+            <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><ul class="flagship-points">
+                  <li data-i18n="projects.cuber.b1">Retrieval-augmented generation (RAG) over the company knowledge base.</li>
+                  <li data-i18n="projects.cuber.b2">LLM tool calling into the CRM and customer support: customer data lookups and support ticket creation from the conversation.</li>
+                  <li data-i18n="projects.cuber.b3">Guardrails against hallucinated answers and a non-regression test suite to keep behaviour stable across changes.</li>
+                  <li data-i18n="projects.cuber.b4">Architecture documented at each step.</li>
+                </ul></div>
+              </details>
             <ul class="tags"><li>LLM</li><li>RAG</li><li>Tool calling</li><li>Guardrails</li><li>ElevenLabs</li><li data-i18n="projects.tag.regr">Regression tests</li></ul>
             <p class="private-note"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="projects.private">Proprietary system, no public repository.</span></p>
           </div>
-          <div class="flagship-flow" aria-hidden="true">
-            <div class="flow-step"><span class="mono">voice</span></div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step"><span class="mono">RAG · knowledge base</span></div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step"><span class="mono">tools · CRM / support</span></div>
-            <div class="flow-arrow"></div>
-            <div class="flow-step gold"><span class="mono">guardrails + tests</span></div>
-          </div>
+          <figure class="flagship-visual">
+            <img src="assets/projects/cuberone-diagram.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Simplified CuberOne architecture: caller voice, speech-to-text, LLM with RAG over the knowledge base and tool calling into CRM and support, guardrails and non-regression tests, ElevenLabs text-to-speech, voice reply" data-i18n-alt="projects.cuber.alt">
+            <figcaption class="media-cap" data-i18n="projects.cap.simplified">Simplified architecture</figcaption>
+          </figure>
         </article>
 
         <div class="projects-grid">
-          <article class="project-card pc-wide reveal" aria-labelledby="p-ragsn">
-            <div class="pc-wide-body">
-              <div class="pc-top pc-top-badges"><span class="badge badge-dev"><span class="dev-dot" aria-hidden="true"></span><span data-i18n="projects.indev">In development</span></span><span class="pc-year mono">2026 · <span data-i18n="projects.rag.kind">open source · RAG</span></span></div>
+          <article class="project-card reveal" aria-labelledby="p-ragsn">
+            <div class="pc-media pc-media--diagram"><img src="assets/projects/rag-diagram.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Architecture diagram of the e-Sénégal RAG chatbot: scraper, embeddings, ChromaDB, re-ranking, Llama 3.2 via Ollama, FastAPI and React" data-i18n-alt="projects.rag.alt"></div>
+            <div class="pc-body">
+              <div class="pc-top"><span class="badge badge-dev"><span class="dev-dot" aria-hidden="true"></span><span data-i18n="projects.indev">In development</span></span><span class="pc-year mono">2026 · <span data-i18n="projects.rag.kind">open source · RAG</span></span></div>
               <h3 id="p-ragsn">Chatbot RAG e-Sénégal</h3>
               <p class="pc-sub" data-i18n="projects.rag.sub">Citizen assistant for e‑senegal.sn administrative procedures</p>
-              <p data-i18n="projects.rag.desc">A RAG assistant that answers citizens' questions about administrative procedures on e‑senegal.sn, the Senegalese government's online one-stop portal, in French and strictly from its document base. A scraper pulls the official procedures catalogue from the portal's public GraphQL API; documents are chunked by section, embedded and indexed in ChromaDB. Retrieved chunks are re-ranked (title and keyword boosts, score threshold) before a local LLM generates the answer, streamed with its sources to a React chat interface.</p>
-              <p data-i18n="projects.rag.desc2">The system prompt enforces a fixed answer structure (documents to provide, cost, processing time) and an explicit "not enough information" reply instead of guessing.</p>
-              <ul class="tags"><li>RAG</li><li>Ollama</li><li>Llama 3.2</li><li>Sentence-Transformers</li><li>ChromaDB</li><li>FastAPI</li><li>React</li><li>Docker Compose</li></ul>
-              <div class="repo-links">
-                <a class="repo-link" href="https://github.com/niangalla/chatbot-rag-esenegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                <span class="pc-note" data-i18n="projects.rag.note">Work in progress · self-hosted with Docker Compose</span>
-              </div>
+              <p class="pc-desc" data-i18n="projects.rag.short">Answers citizens' questions in French, strictly from the official e‑senegal.sn procedures catalogue, with its sources. Runs fully local with Llama 3.2, ChromaDB and FastAPI.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.rag.desc">A RAG assistant that answers citizens' questions about administrative procedures on e‑senegal.sn, the Senegalese government's online one-stop portal, in French and strictly from its document base. A scraper pulls the official procedures catalogue from the portal's public GraphQL API; documents are chunked by section, embedded and indexed in ChromaDB. Retrieved chunks are re-ranked (title and keyword boosts, score threshold) before a local LLM generates the answer, streamed with its sources to a React chat interface.</p><p data-i18n="projects.rag.desc2">The system prompt enforces a fixed answer structure (documents to provide, cost, processing time) and an explicit "not enough information" reply instead of guessing.</p><dl class="pc-stack">
+                  <div><dt>LLM</dt><dd><span data-i18n="projects.rag.llm">Llama 3.2 3B via Ollama (local, CPU)</span></dd></div>
+                  <div><dt>Embeddings</dt><dd>all-MiniLM-L6-v2</dd></div>
+                  <div><dt data-i18n="projects.rag.vdb">Vector DB</dt><dd>ChromaDB</dd></div>
+                  <div><dt>API</dt><dd><span data-i18n="projects.rag.api">FastAPI, streamed NDJSON</span></dd></div>
+                  <div><dt data-i18n="projects.rag.ui">UI</dt><dd>React + Vite</dd></div>
+                  <div><dt data-i18n="projects.rag.run">Run</dt><dd>Docker Compose, 4 services</dd></div>
+                </dl></div>
+              </details>
+              <ul class="tags"><li>RAG</li><li>Ollama</li><li>Llama 3.2</li><li>ChromaDB</li><li>FastAPI</li><li>React</li><li>Docker Compose</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/chatbot-rag-esenegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="pc-note" data-i18n="projects.rag.note">Work in progress · self-hosted with Docker Compose</span></div>
             </div>
-            <dl class="pc-stack">
-              <div><dt>LLM</dt><dd><span data-i18n="projects.rag.llm">Llama 3.2 3B via Ollama (local, CPU)</span></dd></div>
-              <div><dt>Embeddings</dt><dd>all-MiniLM-L6-v2</dd></div>
-              <div><dt data-i18n="projects.rag.vdb">Vector DB</dt><dd>ChromaDB</dd></div>
-              <div><dt>API</dt><dd><span data-i18n="projects.rag.api">FastAPI, streamed NDJSON</span></dd></div>
-              <div><dt data-i18n="projects.rag.ui">UI</dt><dd>React + Vite</dd></div>
-              <div><dt data-i18n="projects.rag.run">Run</dt><dd>Docker Compose, 4 services</dd></div>
-            </dl>
           </article>
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
-            <h3>WattWatch Africa</h3>
-            <p class="pc-sub" data-i18n="projects.ww.sub">Energy affordability ELT pipeline</p>
-            <p data-i18n="projects.ww.desc">Bronze/Silver/Gold ELT on regulator (CRSE) tariff PDFs for 5 Senegalese electricity operators: Scrapy + pdfplumber ingestion, versioned landing in AWS S3, Airflow COPY INTO Snowflake, dbt models tested on every run, Power BI serving. Infrastructure declared in Terraform, GitHub Actions CI.</p>
-            <ul class="tags"><li>AWS S3</li><li>Snowflake</li><li>Airflow</li><li>dbt</li><li>Terraform</li><li>Docker / MinIO</li><li>GitHub Actions</li><li>Power BI</li></ul>
-            <a class="repo-link" href="https://github.com/niangalla/WattWatch_Africa" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <article class="project-card reveal" aria-labelledby="p-ww">
+            <a class="pc-media pc-media--photo" href="assets/projects/wattwatch-full.webp" target="_blank" rel="noopener" aria-label="Open full-size image" data-i18n-aria="projects.zoom"><img src="assets/projects/wattwatch-card.webp" width="1200" height="638" loading="lazy" decoding="async" alt="WattWatch Africa architecture diagram from the repository: sources, Scrapy ingestion, S3 landing, Snowflake with dbt, Power BI" data-i18n-alt="projects.ww.alt"><span class="zoom-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></a>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
+              <h3 id="p-ww">WattWatch Africa</h3>
+              <p class="pc-sub" data-i18n="projects.ww.sub">Energy affordability ELT pipeline</p>
+              <p class="pc-desc" data-i18n="projects.ww.short">Bronze/Silver/Gold ELT on regulator (CRSE) tariff PDFs for 5 Senegalese electricity operators, from AWS S3 to Snowflake to Power BI. dbt models are tested on every run.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.ww.desc">Bronze/Silver/Gold ELT on regulator (CRSE) tariff PDFs for 5 Senegalese electricity operators: Scrapy + pdfplumber ingestion, versioned landing in AWS S3, Airflow COPY INTO Snowflake, dbt models tested on every run, Power BI serving. Infrastructure declared in Terraform, GitHub Actions CI.</p></div>
+              </details>
+              <ul class="tags"><li>AWS S3</li><li>Snowflake</li><li>Airflow</li><li>dbt</li><li>Terraform</li><li>GitHub Actions</li><li>Power BI</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/WattWatch_Africa" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
           </article>
+          <article class="project-card reveal" aria-labelledby="p-obs">
+            <div class="pc-media pc-media--diagram"><img src="assets/projects/obs-diagram.webp" width="1280" height="680" loading="lazy" decoding="async" alt="Observatoire Internet architecture diagram: Playwright scrapers, dated raw snapshots, dbt and DuckDB star schema, CSV exports to Power BI, Streamlit planned" data-i18n-alt="projects.obs.alt"></div>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
+              <h3 id="p-obs">Observatoire Internet</h3>
+              <p class="pc-sub" data-i18n="projects.obs.sub">Internet price comparison · dbt + DuckDB star schema</p>
+              <p class="pc-desc" data-i18n="projects.obs.short">Compares internet offers across operators and countries, normalised to a price per Mb/s. Prices live as dated facts in a dbt + DuckDB star schema.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.obs.desc">Playwright scrapers archive dated, immutable HTML/JSON snapshots of operator pages (Orange SN and Orange CI so far); dbt on DuckDB models them into dimensions and a fact_tarif table. Power BI serves as the analysis lab through CSV exports; a public Streamlit site is planned.</p></div>
+              </details>
+              <ul class="tags"><li>Playwright</li><li>dbt</li><li>DuckDB</li><li data-i18n="skills.c.star">Star schema</li><li>Power BI</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/observatoire-internet" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" aria-labelledby="p-dfe">
+            <a class="pc-media pc-media--photo" href="assets/projects/maritime-full.webp" target="_blank" rel="noopener" aria-label="Open full-size image" data-i18n-aria="projects.zoom"><img src="assets/projects/maritime-card.webp" width="1200" height="594" loading="lazy" decoding="async" alt="DataFlowEngineering360 architecture diagram from the repository: batch and Kafka streaming ingestion, Hadoop raw and clean zones, Spark and dbt, PostgreSQL warehouse, monitoring" data-i18n-alt="projects.dfe.alt"><span class="zoom-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></a>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">2025 · Sonatel Academy</span></div>
+              <h3 id="p-dfe">DataFlowEngineering360</h3>
+              <p class="pc-sub" data-i18n="projects.dfe.sub">Maritime big data pipeline</p>
+              <p class="pc-desc" data-i18n="projects.dfe.short">Batch and streaming pipeline on Port Autonome de Dakar data, from Kafka and Spark to a PostgreSQL warehouse. Orchestrated with Airflow, monitored with ELK.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.dfe.desc">Ingestion with Apache Kafka and Spark, raw storage on HDFS, Airflow-orchestrated ETL into a PostgreSQL star-schema warehouse, data quality checks with Great Expectations, Docker Compose deployment, ELK and Grafana monitoring.</p></div>
+              </details>
+              <ul class="tags"><li>Kafka</li><li>Spark</li><li>HDFS</li><li>Airflow</li><li>PostgreSQL</li><li>Docker Compose</li><li>ELK</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/DataFlowEngineering360_BigData_Maritime_Pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" aria-labelledby="p-met">
+            <a class="pc-media pc-media--photo" href="assets/projects/meteo-full.webp" target="_blank" rel="noopener" aria-label="Open full-size image" data-i18n-aria="projects.zoom"><img src="assets/projects/meteo-card.webp" width="1200" height="550" loading="lazy" decoding="async" alt="DataFlow360 MeteoStream architecture diagram from the repository: weather API producer, Kafka, Logstash to Elasticsearch, Kibana and Redis, PySpark Streaming to an HDFS data lake, Airflow orchestration" data-i18n-alt="projects.met.alt"><span class="zoom-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></a>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">2025 · Sonatel Academy</span></div>
+              <h3 id="p-met">DataFlow360 MeteoStream</h3>
+              <p class="pc-sub" data-i18n="projects.met.sub">Real-time &amp; batch weather data pipeline</p>
+              <p class="pc-desc" data-i18n="projects.met.short">Streams live weather data from the Tomorrow.io API through Kafka and PySpark into an HDFS data lake. Orchestrated with Airflow, monitored with ELK.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.met.desc">Modular Docker Compose stacks (core, Airflow, monitoring, data warehouse, utilities) started by a single script; PostgreSQL for Airflow metadata and the data warehouse; Logstash feeds Elasticsearch/Kibana and Redis. The Streamlit dashboard is still incomplete.</p></div>
+              </details>
+              <ul class="tags"><li>Kafka</li><li>PySpark</li><li>HDFS</li><li>Airflow</li><li>ELK</li><li>Docker Compose</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/dataflow360_meteo_stream_pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" aria-labelledby="p-face">
+            <div class="pc-media pc-media--diagram"><img src="assets/projects/face-diagram.webp" width="1280" height="620" loading="lazy" decoding="async" alt="Realtime Face Recognition diagram: dataset, MTCNN and FaceNet embeddings, SVM training, then webcam, detection, SVM prediction and identity" data-i18n-alt="projects.face.alt"></div>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">AI · Computer vision</span></div>
+              <h3 id="p-face">Realtime Face Recognition</h3>
+              <p class="pc-sub" data-i18n="projects.face.sub">Real-time biometric identification of learners</p>
+              <p class="pc-desc" data-i18n="projects.face.short">Detects faces from a webcam with MTCNN, encodes them as FaceNet embeddings and identifies people with an SVM classifier. Unrecognised faces are labelled "Unknown".</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.face.desc">Three scripts: extract 512-d embeddings from an augmented dataset, train the SVM classifier (scikit-learn), then run real-time recognition on the webcam with OpenCV.</p></div>
+              </details>
+              <ul class="tags"><li>Python</li><li>PyTorch</li><li>FaceNet</li><li>MTCNN</li><li>SVM</li><li>OpenCV</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/Realtime_Face_Recognition" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+        </div>
 
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">2026 · <span data-i18n="projects.ongoing">ongoing</span></span></div>
-            <h3>Observatoire Internet</h3>
-            <p class="pc-sub" data-i18n="projects.obs.sub">Internet price comparison · dbt + DuckDB star schema</p>
-            <p data-i18n="projects.obs.desc">Playwright scrapers archive dated, immutable HTML/JSON snapshots; dbt on DuckDB models them into a star schema (dimensions + fact_tarif) where prices live as dated facts. Offers are normalised into unit prices (per Mb/s) across operators and countries, reported in Power BI and Streamlit.</p>
-            <ul class="tags"><li>Playwright</li><li>dbt</li><li>DuckDB</li><li data-i18n="skills.c.star">Star schema</li><li>Power BI</li><li>Streamlit</li></ul>
-            <a class="repo-link" href="https://github.com/niangalla/observatoire-internet" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="group-head reveal">
+          <h3 class="group-title"><span class="skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg></span><span data-i18n="projects.bi.title">Analytics &amp; BI</span></h3>
+          <p class="group-sub" data-i18n="projects.bi.sub">Power BI monitoring &amp; evaluation dashboards on Senegalese public references.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal" aria-labelledby="p-agri">
+            <a class="pc-media pc-media--shot" href="assets/projects/pbi-agri-full.webp" target="_blank" rel="noopener" aria-label="Open full-size image" data-i18n-aria="projects.zoom"><img src="assets/projects/pbi-agri-card.webp" width="1200" height="695" loading="lazy" decoding="async" alt="Overview page of the Power BI climate-resilient agriculture dashboard: KPI cards, yield trend by value chain, adoption rate by region, breakdowns by value chain and practice" data-i18n-alt="projects.agri.alt"><span class="zoom-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span><span class="media-cap" data-i18n="projects.cap.sim">Partly simulated data</span></a>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">Power BI · <span data-i18n="projects.bi.me">M&amp;E</span></span></div>
+              <h3 id="p-agri" data-i18n="projects.agri.title">Climate-resilient agriculture</h3>
+              <p class="pc-sub" data-i18n="projects.agri.sub">Monitoring &amp; evaluation dashboard · Senegal</p>
+              <p class="pc-desc" data-i18n="projects.agri.short">Tracks the adoption of climate-resilient practices and their effect on yields, by region and value chain. DAPSA/EAA reference figures plus simulated program data.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.agri.desc">4 report pages (Home, Overview, Geographic breakdown, Insight) with Region and Value-chain filters synced across pages. Two-table model (campaigns → farmer groups) with DAX measures for average yield, adoption rate and share of women beneficiaries. Demo scope: 8 regions, 2022–2025.</p></div>
+              </details>
+              <ul class="tags"><li>Power BI</li><li>DAX</li><li data-i18n="projects.tag.model">Data modeling</li><li data-i18n="projects.tag.kpi">KPI design</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/dashboard-agriculture-resiliente-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
           </article>
-
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">2025 · Sonatel Academy</span></div>
-            <h3>DataFlowEngineering360</h3>
-            <p class="pc-sub" data-i18n="projects.dfe.sub">Maritime big data pipeline</p>
-            <p data-i18n="projects.dfe.desc">Distributed pipeline on Port Autonome de Dakar data: ingestion with Apache Kafka, processing with Apache Spark, storage on HDFS, Airflow-orchestrated ETL into a PostgreSQL data warehouse, Docker Compose deployment and ELK monitoring.</p>
-            <ul class="tags"><li>Kafka</li><li>Spark</li><li>HDFS</li><li>Airflow</li><li>PostgreSQL</li><li>Docker Compose</li><li>ELK</li></ul>
-            <a class="repo-link" href="https://github.com/niangalla/DataFlowEngineering360_BigData_Maritime_Pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">2025</span></div>
-            <h3>DataFlow360 MeteoStream</h3>
-            <p class="pc-sub" data-i18n="projects.met.sub">Real-time &amp; batch weather data pipeline</p>
-            <p data-i18n="projects.met.desc">Combines streaming and batch processing of weather data, with ELK monitoring and DevOps practices.</p>
-            <ul class="tags"><li>Streaming</li><li>Batch</li><li>ELK</li><li>DevOps</li></ul>
-            <a class="repo-link" href="https://github.com/niangalla/dataflow360_meteo_stream_pipeline" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">AI · Computer vision</span></div>
-            <h3>Realtime Face Recognition</h3>
-            <p class="pc-sub" data-i18n="projects.face.sub">Real-time biometric identification of learners</p>
-            <p data-i18n="projects.face.desc">A real-time face recognition system built with FaceNet embeddings and an SVM classifier.</p>
-            <ul class="tags"><li>Python</li><li>PyTorch</li><li>FaceNet</li><li>SVM</li><li>OpenCV</li></ul>
-            <a class="repo-link" href="https://github.com/niangalla/Realtime_Face_Recognition" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="pc-top"><span class="pc-year mono">2026 · Power BI</span></div>
-            <h3 data-i18n="projects.pbi.title">KPI dashboards, Senegal</h3>
-            <p class="pc-sub" data-i18n="projects.pbi.sub">Resilient agriculture &amp; community health programs</p>
-            <p data-i18n="projects.pbi.desc">Target vs actual tracking (completion rate, gap to target, territorial prioritization) with relational models and DAX measures across 8 regions and 8 health districts.</p>
-            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li data-i18n="projects.tag.kpi">KPI design</li></ul>
-            <div class="repo-links">
-              <a class="repo-link" href="https://github.com/niangalla/dashboard-agriculture-resiliente-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.agri">Agriculture</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="repo-link" href="https://github.com/niangalla/dashboard-sante-communautaire-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.health">Health</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <article class="project-card reveal" aria-labelledby="p-sante">
+            <a class="pc-media pc-media--shot" href="assets/projects/pbi-sante-full.webp" target="_blank" rel="noopener" aria-label="Open full-size image" data-i18n-aria="projects.zoom"><img src="assets/projects/pbi-sante-card.webp" width="1200" height="695" loading="lazy" decoding="async" alt="Indicators page of the Power BI community health dashboard: completion rate KPIs, completion vs target by indicator, quarterly trend and gap to target by district" data-i18n-alt="projects.sante.alt"><span class="zoom-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span><span class="media-cap" data-i18n="projects.cap.sim">Partly simulated data</span></a>
+            <div class="pc-body">
+              <div class="pc-top"><span class="pc-year mono">Power BI · <span data-i18n="projects.bi.me">M&amp;E</span></span></div>
+              <h3 id="p-sante" data-i18n="projects.sante.title">Community health</h3>
+              <p class="pc-sub" data-i18n="projects.sante.sub">Logframe dashboard, target vs actual · Senegal</p>
+              <p class="pc-desc" data-i18n="projects.sante.short">Compares 4 community health indicators against their targets across 8 health districts, to spot territorial gaps. EDS-Continue 2023 (ANSD) references plus simulated program data.</p>
+              <details class="pc-details">
+                <summary><span data-i18n="projects.details">Details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="pc-details-body"><p data-i18n="projects.sante.desc">3 report pages (Summary, Indicators, Action priorities) filtered by health district, indicator and quarter. DAX measures for completion rate, gap to target and indicators below target, with conditional formatting on the gap. Demo scope: 8 quarters, 2024–2025.</p></div>
+              </details>
+              <ul class="tags"><li>Power BI</li><li>DAX</li><li data-i18n="projects.tag.model">Data modeling</li><li data-i18n="projects.tag.kpi">KPI design</li></ul>
+              <div class="repo-links"><a class="repo-link" href="https://github.com/niangalla/dashboard-sante-communautaire-senegal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="projects.repo">View repository</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
             </div>
           </article>
         </div>
@@ -365,7 +419,6 @@
                 <p class="tl-org">Cuberfit · Dakar</p>
                 <ul>
                   <li data-i18n="exp.cuber.b1">Design and build automated ELT pipelines orchestrated with Apache Airflow; model and transform data with SQL and dbt; containerized workloads with Docker.</li>
-                  <li data-i18n="exp.cuber.b2">Designed the target ingestion architecture (Airbyte → warehouse → dbt → marts).</li>
                   <li data-i18n="exp.cuber.b3">Build and operate CuberOne, the production voice AI assistant (RAG, tool calling into CRM/support, guardrails, non-regression tests).</li>
                   <li data-i18n="exp.cuber.b4">Product analytics with Amplitude: user event tracking and key product metrics, with Product and Engineering teams.</li>
                 </ul>
@@ -428,6 +481,53 @@
             </ul>
           </aside>
         </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS / PEER REVIEW -->
+    <section class="section" id="recommendations" aria-labelledby="reco-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="stage-tag"><span class="stage-num" aria-hidden="true">&ldquo;&rdquo;</span><span data-i18n="stage.review">peer review</span></p>
+          <h2 id="reco-title" data-i18n="reco.title">Recommendations</h2>
+          <p class="section-sub" data-i18n="reco.sub">What former classmates and teammates wrote on LinkedIn.</p>
+        </header>
+        <div class="reco-grid">
+          <figure class="reco-card reveal">
+            <span class="reco-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p data-i18n="reco.1.q">“A rigorous, business-oriented data professional, he knows how to turn raw data into clear analyses that are useful for decision-making. […] a reliable, efficient profile, immediately operational.”</p></blockquote>
+            <p class="reco-tr" data-i18n="reco.tr">Translated from French</p>
+            <figcaption>
+              <span class="reco-name">Khadim mbacké Ndiaye</span>
+              <span class="reco-head">Lead Data Scientist &amp; AI Specialist | Société Générale</span>
+              <span class="reco-rel mono" data-i18n="reco.1.rel">Studied together, Dec 2025</span>
+              <a class="reco-link" href="https://www.linkedin.com/in/bamba-ndiaye-datascientist/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><span data-i18n="reco.profile">LinkedIn profile</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </figcaption>
+          </figure>
+          <figure class="reco-card reveal">
+            <span class="reco-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p data-i18n="reco.2.q">“He excels at designing robust, scalable and well-documented data pipelines. Alla is an excellent teammate: rigorous, a natural teacher, and with a great ability to pass on technical knowledge in a clear and accessible way.”</p></blockquote>
+            <p class="reco-tr" data-i18n="reco.tr">Translated from French</p>
+            <figcaption>
+              <span class="reco-name">Diarra Ndoye</span>
+              <span class="reco-head">Data Analyst | Orange Money Sénégal</span>
+              <span class="reco-rel mono" data-i18n="reco.2.rel">Studied together, Jan 2026</span>
+              <a class="reco-link" href="https://www.linkedin.com/in/diarra-ndoye-7b944a23a/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><span data-i18n="reco.profile">LinkedIn profile</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </figcaption>
+          </figure>
+          <figure class="reco-card reveal">
+            <span class="reco-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p data-i18n="reco.3.q">“I had the pleasure of working as a team with Alla, notably on the DataFlow360 project, a complete platform for real-time and batch data processing. […] His rigour, his teaching skills and his team spirit make him a valuable asset for any data project.”</p></blockquote>
+            <p class="reco-tr" data-i18n="reco.tr">Translated from French</p>
+            <figcaption>
+              <span class="reco-name">Mame Mariama Diarra Bousso Ngane</span>
+              <span class="reco-head">Orange Money Sénégal</span>
+              <span class="reco-rel mono" data-i18n="reco.3.rel">Teammate on DataFlow360, Jan 2026</span>
+              <a class="reco-link" href="https://www.linkedin.com/in/sokhna-diarra-ngane/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><span data-i18n="reco.profile">LinkedIn profile</span><svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="more-link reveal"><a href="https://www.linkedin.com/in/alla-niang-212644137/details/recommendations/" target="_blank" rel="noopener"><span data-i18n="reco.all">See all 7 recommendations on LinkedIn</span> <svg class="ic ic-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
       </div>
     </section>
 
@@ -528,6 +628,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=202610231639" defer></script>
+  <script src="js/main.js?v=202610231745" defer></script>
 </body>
 </html>

@@ -9,6 +9,7 @@ index.html          single page (EN by default, FR/EN toggle, light/dark toggle)
 css/style.css       all styles ("data pipeline" theme)
 js/main.js          translations (EN/FR object), theme, pipeline rail, contact form (FormSubmit)
 assets/             photo (webp + jpg), CV PDF, favicon, Open Graph image
+assets/projects/    project card visuals (webp): repo diagrams/screenshots (*-card, *-full) and drawn diagrams (*-diagram)
 .nojekyll           tells GitHub Pages to serve files as-is
 ```
 
@@ -52,6 +53,8 @@ Subjects are prefixed with `[Portfolio] `, a hidden `_honey` field blocks simple
 
 - **Text**: every visible string has a `data-i18n` key. Edit the English text in `index.html` *and* the matching key in both `en` and `fr` objects in `js/main.js` (the JS object wins when the page loads).
 - **CV**: replace `assets/Alla_Niang_CV.pdf` (keep the file name).
+- **Project visuals**: card images live in `assets/projects/` (16:9 cards, `-full` versions open on click). Keep `width`/`height` in `index.html` in sync if you swap one.
+- **Recommendations**: quotes live in `js/main.js` (`reco.*` keys; FR verbatim, EN translated).
 - **Photo**: replace `assets/alla-niang.webp` and `assets/alla-niang.jpg` (portrait, 4:5, ~800×1000).
 - **Language link**: `?lang=fr` opens the French version directly (e.g. `https://niangalla.github.io/?lang=fr`).
 - If you use a custom domain or another repo name, update the `canonical`, `og:url` and `og:image` URLs in `index.html`.
